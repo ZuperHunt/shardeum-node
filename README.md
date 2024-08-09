@@ -17,9 +17,9 @@ Kamu bisa gunakan VPS atau PC pribadi dengan kebutuhan:
 
 | Part | Minimum | Recommended |
 | ------------- | ------------- | ------------- |
-| CPU | TBD | TBD |
-| RAM | TBD | TBD |
-| SSD | TBD | TBD |
+| CPU | 2 Cores | 4 Cores |
+| RAM | 16 GB | - |
+| SSD | 256 GB | - |
 
 Tutorial ini dibuat menggunakan Linux (Ubuntu), untuk sistem operasi lainnya mungkin akan sedikit berbeda.
 
@@ -29,10 +29,6 @@ Tutorial ini dibuat menggunakan Linux (Ubuntu), untuk sistem operasi lainnya mun
 
 ```
 sudo apt-get install curl
-```
-
-```
-sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin docker-compose
 ```
 
 ### 2.2 Install Docker
@@ -46,20 +42,20 @@ sudo chmod +x /usr/local/bin/docker-compose
 
 ## 3. Executions
 
-### 3.2 Download Validator
+### 3.1 Download Validator
 
 ```
 curl -O https://raw.githubusercontent.com/shardeum/validator-dashboard/main/installer.sh && chmod +x installer.sh
 ```
 
-### 3.3 Install Validator
+### 3.2 Install Validator
 
 Dengan menjalankan perintah berikut, akan muncul beberapa pengaturan, cukup tekan `enter` pada keyboard untuk mengisi secara default. Step ini akan memakan waktu, tunggu saja sampai proses instalasi selesai.
 ```
 ./installer.sh
 ```
 
-### 3.4 Set up Wallet and Stake SHM
+### 3.3 Set up Wallet and Stake SHM
 
 Kunjungi dashboard, ubah `<YOUR_VPS_IP>` sesuai punyamu.
 ```
@@ -69,7 +65,7 @@ Hubungkan wallet EVM (rekomendasi: gunakan Rabby), stake SHM minimal 10 ([faucet
 
 ![image](https://github.com/user-attachments/assets/e45efc4a-29b1-4a74-b1f0-46d30eaa0eae)
 
-### 3.5 Start validator
+### 3.4 Start validator
 
 Tinggal tekan tombol `Stark Node` sampai statusnya hijau, node akan standby sampai terpilih karena validating dipilih secara acak.
 
@@ -77,7 +73,7 @@ Tinggal tekan tombol `Stark Node` sampai statusnya hijau, node akan standby samp
 
 # Help
 
-## Validator installation stucks (step 3.3)?
+## Validator installation stucks (step 3.2)?
 
 `ctrl` + `c` untuk berhenti, ulangi instalnya.
 
