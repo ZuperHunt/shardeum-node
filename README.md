@@ -1,57 +1,91 @@
-Penulis: [nama_penulis](link_twt)
+Penulis: [Naufal](https://x.com/0xfal)
 
-# Pengenalan
-Bab ini berisi pengenalan mengenai nama_project
-
-## Nama_Project
 > [!NOTE]
-> berikan_description_singkat_mengenai_project_tersebut
+> **WHAT IS Shardeum?**\
+> .
 
-### Investor
-taroh_img_investor_jika_ada
+# Tutorial Shardeum Atomium Node
 
-# Tutorial XXX
-Bab ini berisi tutorial cara menjalankan XXX
+## 1. Needs
 
-## Requirement
-Syarat menjalankan XXX
-- Spek Komputer
-  
-| Name | Minimum |
-| ------------- | ------------- |
-| Operating System  | OS_NAME  |
-| CPU  | X Cores  |
-| RAM  | X GB  |
-| SSD  | XX GB  |
-- item_2_dan_seterusnya_jika_ada
+### 1.1 Computer
 
-> [!TIP]
-> Kami menggunakan Digital Ocean dengan speksifikasi `XX/ X Core/ X GB RAM/ XX GB SSD`. Jika kamu membutuhkan VPS, kami memiliki link gratis credit VPS DigitalOcean sebesar $200. Cukup untuk menjalankan XXX selama XX . Daftar sekarang dengan [link utama](link_reff_do_kamu) / [link cadangan](link_reff_do_2_kamu) untuk mendapatkannya.
-  
-## Dependencies
+Kamu bisa gunakan VPS atau PC pribadi dengan kebutuhan:
 
-### Install X 
+| ✅ Linux | ✅ macOS | ✅ Windows (WSL) |
+| ------------- | ------------- | ------------- |
+
+| Part | Minimum | Recommended |
+| ------------- | ------------- | ------------- |
+| CPU | TBD | TBD |
+| RAM | TBD | TBD |
+| SSD | TBD | TBD |
+
+Tutorial ini dibuat menggunakan Linux (Ubuntu), untuk sistem operasi lainnya mungkin akan sedikit berbeda.
+
+## 2. Dependencies
+
+### 2.1 Install Curl
+
 ```
-sudo apt-get install xxxx
-```
-
-## Menjalankan XXX
-
-### Run XXX
-```
-code blocks for commands
+sudo apt-get install curl
 ```
 
-## Help
+```
+sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin docker-compose
+```
 
-Join komunitas [Discord ZuperHunt](https://t.co/n7TeWVlA48) jika kamu ada pertanyaan.
+### 2.2 Install Docker
 
-## Change Logs
+```
+sudo apt update
+sudo apt install docker.io
+sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+sudo chmod +x /usr/local/bin/docker-compose
+```
 
-* 0.0.1
-    * Initial Release
+## 3. Executions
 
-## Acknowledgments
+### 3.2 Download Validator
 
-Referensi
-* [nama_referensi](link_referensi)
+```
+curl -O https://raw.githubusercontent.com/shardeum/validator-dashboard/main/installer.sh && chmod +x installer.sh
+```
+
+### 3.3 Install Validator
+
+Dengan menjalankan perintah berikut, akan muncul beberapa pengaturan, cukup tekan `enter` pada keyboard untuk mengisi secara default. Step ini akan memakan waktu, tunggu saja sampai proses instalasi selesai.
+```
+./installer.sh
+```
+
+### 3.4 Set up Wallet and Stake SHM
+
+Kunjungi dashboard, ubah `<YOUR_VPS_IP>` sesuai punyamu.
+```
+https://<YOUR_VPS_IP>:8080/maintenance
+```
+Hubungkan wallet EVM (rekomendasi: gunakan Rabby), stake SHM minimal 10 ([faucet](https://docs.shardeum.org/docs/faucet/claim)), ubah gwei menjadi custom: 1000.
+
+![image](https://github.com/user-attachments/assets/e45efc4a-29b1-4a74-b1f0-46d30eaa0eae)
+
+### 3.5 Start validator
+
+Tinggal tekan tombol `Stark Node` sampai statusnya hijau, node akan standby sampai terpilih karena validating dipilih secara acak.
+
+![image](https://github.com/user-attachments/assets/8e5bd80f-d7ab-47c5-9d37-ce668f1e7b74)
+
+# Help
+
+## Validator installation stucks (step 3.3)?
+
+`ctrl` + `c` untuk berhenti, ulangi instalnya.
+
+---
+
+Reach us if you have more questions:\
+ZuperHunt's [Discord server](https://discord.gg/ZuperHunt) | [X(Twitter)](https://twitter.com/ZuperHunt)
+
+# Acknowledgements
+
+* [Shardeum Documentation](https://docs.shardeum.org/docs/node/run/validator)
