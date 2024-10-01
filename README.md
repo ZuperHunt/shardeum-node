@@ -50,10 +50,13 @@ curl -O https://raw.githubusercontent.com/shardeum/validator-dashboard/main/inst
 
 ### 3.2 Install Validator
 
-Dengan menjalankan perintah berikut, akan muncul beberapa pengaturan, cukup tekan `enter` pada keyboard untuk mengisi secara default. Step ini akan memakan waktu, tunggu saja sampai proses instalasi selesai.
 ```
 ./installer.sh
 ```
+Dengan menjalankan perintah di atas, akan muncul beberapa pertanyaan pengaturan, cukup tekan `enter` pada keyboard untuk mengisi secara default.
+Kalian akan ditanya `Do you want to run the web based Dashboard? (Y/n)`, jawab saja `Y`, dan buat password.
+
+Proses instalasi akan memakan waktu, tunggu saja sampai prosesnya selesai.
 
 ### 3.3 Set up Wallet and Stake SHM
 
@@ -79,7 +82,7 @@ Tinggal tekan tombol `Stark Node` sampai statusnya hijau, node akan standby samp
 
 ---
 
-Reach us if you have more questions:\
+Reach us if you have more question:\
 ZuperHunt's [Discord server](https://discord.gg/ZuperHunt) | [X(Twitter)](https://twitter.com/ZuperHunt)
 
 # Acknowledgements
