@@ -18,8 +18,8 @@ Kamu bisa gunakan VPS atau PC pribadi dengan kebutuhan:
 | Part | Minimum | Recommended |
 | ------------- | ------------- | ------------- |
 | CPU | 2 Cores | 4 Cores |
-| RAM | 16 GB | - |
-| SSD | 256 GB | - |
+| RAM | 8 GB | 16 GB |
+| SSD | 250 GB | - |
 
 Tutorial ini dibuat menggunakan Linux (Ubuntu), untuk sistem operasi lainnya mungkin akan sedikit berbeda.
 
@@ -60,19 +60,26 @@ Proses instalasi akan memakan waktu, tunggu saja sampai prosesnya selesai.
 
 ### 3.3 Set up Wallet and Stake SHM
 
-Kunjungi dashboard, ubah `<YOUR_VPS_IP>` sesuai punyamu.
+Buka Shardeum Dashboard di browser dengan mengunjungi link di bawah ini, `<YOUR_VPS_IP>` sesuai punyamu.
 ```
 https://<YOUR_VPS_IP>:8080/maintenance
 ```
-Hubungkan wallet EVM (rekomendasi: gunakan Rabby), stake SHM minimal 10 ([faucet](https://docs.shardeum.org/docs/faucet/claim)), ubah gwei menjadi custom: 1000.
+Hubungkan wallet EVM (rekomendasi: gunakan Rabby), stake minimal 10 SHM (klaim SHM di [faucet](https://docs.shardeum.org/docs/faucet/claim)).
 
-![image](https://github.com/user-attachments/assets/e45efc4a-29b1-4a74-b1f0-46d30eaa0eae)
+> [!NOTE]
+> Saat staking, ubah gas menjadi `Instant` untuk menghindari macet transaksi.
+
+![{C04ECFAB-BA83-4F7C-AE96-BBAD64CE1349}](https://github.com/user-attachments/assets/304ef408-55ff-4d92-8860-44cafb2c045a)
 
 ### 3.4 Start validator
 
 Tinggal tekan tombol `Stark Node` sampai statusnya hijau, node akan standby sampai terpilih karena validating dipilih secara acak.
 
-![image](https://github.com/user-attachments/assets/8e5bd80f-d7ab-47c5-9d37-ce668f1e7b74)
+> [!WARNING]
+> Terkadang, UI-nya akan menampilkan node kalian `Stopped`, coba refresh halaman browser beberapa kali sampai benar-benar yakin kalau node-nya beneran mati.
+> Karena traffic yang padat, mengakibatkan hal ini, yang mungkin harusnya berstatus `On Standby` malah `Stopped`.
+
+![image](https://github.com/user-attachments/assets/308a395e-b482-4180-856d-dbfd888f6292)
 
 # Help
 
