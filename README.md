@@ -87,6 +87,22 @@ Tinggal tekan tombol `Stark Node` sampai statusnya hijau, node akan standby samp
 
 `ctrl` + `c` untuk berhenti, ulangi instalnya.
 
+## How to clean up my Shardeum old files?
+
+```
+cd ~/.shardeum
+./cleanup.sh
+cd ~/
+rm -rf .shardeum
+rm installer.sh
+```
+
+## How to fix Docker container issue?
+
+```
+docker system prune
+```
+
 ---
 
 Reach us if you have more question:\
