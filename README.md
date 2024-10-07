@@ -64,16 +64,20 @@ Buka Shardeum Dashboard di browser dengan mengunjungi link di bawah ini, `<YOUR_
 ```
 https://<YOUR_VPS_IP>:8080/maintenance
 ```
-Hubungkan wallet EVM (rekomendasi: gunakan Rabby), stake minimal 10 SHM (klaim SHM di [faucet](https://docs.shardeum.org/docs/faucet/claim)).
+Hubungkan wallet EVM (rekomendasi: gunakan Rabby / MetaMask), stake minimal 10 SHM (klaim SHM di [faucet](https://docs.shardeum.org/docs/faucet/claim)).
 
 > [!NOTE]
 > Saat staking, ubah gas menjadi `Instant` untuk menghindari macet transaksi.
 
 ![{C04ECFAB-BA83-4F7C-AE96-BBAD64CE1349}](https://github.com/user-attachments/assets/304ef408-55ff-4d92-8860-44cafb2c045a)
 
-### 3.4 Start validator
+### 3.4 Start Validator
 
 Tinggal tekan tombol `Stark Node` sampai statusnya hijau, node akan standby sampai terpilih karena validating dipilih secara acak.
+
+### 3.5 Verify Validator Quest
+
+[Verify here](https://shardeum.org/incentivized-testnet/validator), node setup is successful only when you enter `On Standby` or `Validating` status.
 
 > [!WARNING]
 > Terkadang, UI-nya akan menampilkan node kalian `Stopped`, coba refresh halaman browser beberapa kali sampai benar-benar yakin kalau node-nya beneran mati.
