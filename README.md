@@ -107,6 +107,56 @@ rm installer.sh
 docker system prune
 ```
 
+## How to use CLI command?
+
+Kamu perlu menjalankan `shell.sh`, lokasinya ada di dalam folder `.shardeum`.
+
+```
+cd ~/.shardeum
+./shell.sh
+```
+
+## How to "start / stop / check status" my node with CLI?
+
+Start node with CLI:
+
+```
+operator-cli start
+```
+
+Stop node with CLI:
+
+```
+operator-cli stop
+```
+
+Check node status with CLI:
+
+```
+operator-cli status
+```
+
+## How to update my node?
+
+GUI:
+
+- Stop your validator before updating (you don't need to unstake though)
+- Run this command:
+```
+curl -O https://raw.githubusercontent.com/shardeum/validator-dashboard/main/installer.sh && chmod +x installer.sh && ./installer.sh
+```
+- You might manually have to start the GUI afterwards with:
+```
+operator-cli gui start
+```
+
+CLI and GUI:
+
+```
+operator-cli version
+operator-cli update
+```
+
 ---
 
 Reach us if you have more question:\
