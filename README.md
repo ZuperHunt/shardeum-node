@@ -116,6 +116,12 @@ cd ~/.shardeum
 ./shell.sh
 ```
 
+Jika tidak bisa menggunakan cmd di atas bisa menggunakan cmd ini (di beberapa versi mungkin berbeda cara)
+
+```
+cd /home/root/.shardeum
+./shell.sh
+```
 ## How to "start / stop / check status" my node with CLI?
 
 Start node with CLI:
