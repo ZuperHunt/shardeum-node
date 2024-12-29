@@ -1,4 +1,5 @@
-Penulis: [Naufal](https://x.com/0xfal)
+Penulis:
+[Naufal](https://x.com/0xfal)
 
 > [!NOTE]
 > **WHAT IS Shardeum?**\
@@ -126,7 +127,7 @@ rm -rf installer.sh
 
 ## How to update my node?
 
-Read how to use [the CLI commands](##How-to-use-the-CLI-commands) first
+Read how to use [the CLI commands](#How-to-use-the-CLI-commands) first
 
 ```
 operator-cli stop
